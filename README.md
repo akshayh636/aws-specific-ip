@@ -23,7 +23,7 @@ This repository contains a script designed to find and manage AWS-specific IP pr
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/akshayh636/aws-specific-ip/blob/main/aws_ip_script.sh -0 aws_ip_script.sh
+    wget https://raw.githubusercontent.com/akshayh636/aws-specific-ip/main/aws_ip_script.sh
     chmod +x aws_ip_script.sh
     sudo ./aws_ip_script.sh
     ```
