@@ -23,23 +23,6 @@ This repository contains a script designed to find and manage AWS-specific IP pr
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/aws-specific-ip-in-vm.git
-    cd aws-specific-ip-in-vm
+    git clone https://github.com/akshayh636/aws-specific-ip/blob/main/config.py
+    sudo python3 config.py
     ```
-
-2. Install required dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-3. Configure your AWS credentials:
-    ```bash
-    aws configure
-    ```
-
-## Usage
-
-To search for specific IP prefixes, run the following command:
-
-```bash
-python find_ip_prefix.py --prefix <ip-prefix> --region <aws-region>
