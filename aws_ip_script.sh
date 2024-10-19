@@ -17,7 +17,6 @@ fi
 python3 - <<EOF
 import subprocess
 import sys
-import boto3
 import argparse
 import time
 
