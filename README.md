@@ -21,9 +21,16 @@ This repository contains a script designed to find and manage AWS-specific IP pr
 
 ### Making up the enviroment
 
-1.
-    ```bash
+1. Clone the Repository
+
+   ```bash
     wget https://raw.githubusercontent.com/akshayh636/aws-specific-ip/main/environment.sh
+    ```
+2. Make the Script Executable  
+    ```bash
     chmod +x environment.sh
+    ```
+3. Run the Script 
+    ```bash
     sudo ./environment.sh
     ```
