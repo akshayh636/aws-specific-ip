@@ -60,3 +60,4 @@ wget https://raw.githubusercontent.com/akshayh636/aws-specific-ip/main/aws_ip.py
 ```bash
 python3 aws_ip.py
   ```
+# Windows bat script coming soon.
