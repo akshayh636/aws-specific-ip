@@ -34,3 +34,23 @@ This repository contains a script designed to find and manage AWS-specific IP pr
     ```bash
     sudo ./environment.sh
     ```
+
+### Aftter this your shell may look like this
+
+   ```bash
+Installing pip...
+Setting up the environment...
+Creating virtual environment directory...
+Starting the virtual Python environment...
+To activate the virtual environment, run the following commands:
+cd ~/environments/akshay
+source bin/activate
+Python environment setup is successful.
+  ```    
+
+
+### To setup the environment , run this
+   ```bash
+cd ~/environments/akshay
+source bin/activate
+  ```
