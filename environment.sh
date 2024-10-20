@@ -26,8 +26,8 @@ if [ $? -ne 0 ]; then
 fi
 
 # Create a directory for virtual environments
-mkdir -p ~/environments
-cd ~/environments
+mkdir environments
+cd environments
 
 # Create and start the virtual Python environment
 echo "Starting the virtual Python environment..."
