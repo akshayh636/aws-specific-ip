@@ -24,8 +24,27 @@ fi
 echo "Setting up the environment..."
 sudo apt install -y build-essential libssl-dev libffi-dev python3-dev python3-venv &>/dev/null
 
+if [ $? -ne 0 ]; then
+    echo "Failed to install development packages. Exiting..."
+    exit 1
+fi
+
+# Create a directory for virtual environments
+echo "Creating virtual environment directory..."
+mkdir -p ~/environments &>/dev/null
+if [ $? -ne 0 ]; then
+    echo "Failed to create the environments directory. Exiting..."
+    exit 1
+fi
+
+cd ~/environments
+if [ $? -ne 0 ]; then
+    echo "Failed to navigate to the environments directory. Exiting..."
+    exit 1
+fi
+
 # Create and start the virtual Python environment
-echo "Installing the environment..."
+echo "Starting the virtual Python environment..."
 python3 -m venv akshay &>/dev/null
 
 if [ $? -ne 0 ]; then
@@ -33,7 +52,9 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-# Starting the environments
-echo -e "${GREEN}Python environment setup is successful.:${NC}"
-echo -e "${GREEN}Starting the environment${NC}"
-source akshay/bin/activate
+# Provide instructions for the user to manually activate the environment
+echo -e "${GREEN}To activate the virtual environment, run the following commands:${NC}"
+echo -e "${GREEN}cd ~/environments/akshay${NC}"
+echo -e "${GREEN}source bin/activate${NC}"
+
+echo "Python environment setup is successful."
