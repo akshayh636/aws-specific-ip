@@ -26,11 +26,10 @@ if [ $? -ne 0 ]; then
 fi
 
 # Create a directory for virtual environments
-mkdir environments
-cd environments
+mkdir -p ~/environments
+cd ~/environments
 
 # Create and start the virtual Python environment
-echo "Starting the virtual Python environment..."
 python3 -m venv akshay
 
 if [ $? -ne 0 ]; then
@@ -46,3 +45,5 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "Python environment setup is successful."
+
+source my_env/bin/akshay
