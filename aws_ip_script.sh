@@ -34,7 +34,7 @@ try:
     import boto3
 except ImportError:
     print("Boto3 not found. Installing...")
-    install('boto3')
+    pip install boto3
     import boto3
 
 # Prompt user for AWS credentials
