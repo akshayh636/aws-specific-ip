@@ -19,6 +19,10 @@ This repository contains a script designed to find and manage AWS-specific IP pr
 - AWS CLI configured with your AWS credentials.
 - AWS VM instance id and region
 
+### How to get aws access credentials
+
+- https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html
+
 ### Making up the enviroment
 
 1. Clone the Repository
