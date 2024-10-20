@@ -51,7 +51,7 @@ pip install boto3
 ```bash
 wget https://raw.githubusercontent.com/akshayh636/aws-specific-ip/main/aws_ip.py
   ```
-3. Run the Script and enter your aws credentials
+3. Run the Script and enter your aws credentials and your preferable ip prefix
 
 ```bash
 python3 aws_ip.py
