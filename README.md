@@ -46,3 +46,13 @@ source bin/activate
 ```bash
 pip install boto3
   ```
+2. Clone the python script
+
+```bash
+wget https://raw.githubusercontent.com/akshayh636/aws-specific-ip/main/aws_ip.py
+  ```
+3. Run the Script and enter your aws credentials
+
+```bash
+python3 aws_ip.py
+  ```
