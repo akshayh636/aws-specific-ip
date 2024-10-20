@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Define color codes
+GREEN='\033[1;32m'
+NC='\033[0m' # No Color
+
 # Check if the script is run as root or with sudo
 if [ "$(id -u)" -ne 0 ]; then
     echo "Please run this script as root or with sudo."
@@ -48,9 +52,9 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
+# Provide instructions for the user to manually activate the environment
+echo -e "${GREEN}To activate the virtual environment, run the following commands:${NC}"
+echo -e "${GREEN}cd ~/environments/akshay${NC}"
+echo -e "${GREEN}source bin/activate${NC}"
+
 echo "Python environment setup is successful."
-
-
-echo "Starting the environment"
-cd environments 
-source akshay/bin/activate &>/dev/null
