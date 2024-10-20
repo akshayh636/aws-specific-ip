@@ -6,44 +6,32 @@ if [ "$(id -u)" -ne 0 ]; then
     exit 1
 fi
 
+# Function to handle command execution and error checking
+execute_command() {
+    $1 &>/dev/null
+    if [ $? -ne 0 ]; then
+        echo "Error: $2. Exiting..."
+        exit 1
+    fi
+}
+
 # Install pip
 echo "Installing pip..."
-sudo apt update
-sudo apt install -y python3-pip
-
-if [ $? -ne 0 ]; then
-    echo "Failed to install pip. Exiting..."
-    exit 1
-fi
+execute_command "sudo apt update" "Failed to update package list"
+execute_command "sudo apt install -y python3-pip" "Failed to install pip"
 
 # Environment setup
 echo "Setting up the environment..."
-sudo apt install -y build-essential libssl-dev libffi-dev python3-dev python3-venv
-
-if [ $? -ne 0 ]; then
-    echo "Failed to install development packages. Exiting..."
-    exit 1
-fi
+execute_command "sudo apt install -y build-essential libssl-dev libffi-dev python3-dev python3-venv" "Failed to install development packages"
 
 # Create a directory for virtual environments
 mkdir -p ~/environments
 cd ~/environments
 
 # Create and start the virtual Python environment
-python3 -m venv akshay
-
-if [ $? -ne 0 ]; then
-    echo "Failed to create the virtual environment. Exiting..."
-    exit 1
-fi
+echo "Starting the virtual Python environment..."
+execute_command "python3 -m venv akshay" "Failed to create the virtual environment"
 
 source akshay/bin/activate
 
-if [ $? -ne 0 ]; then
-    echo "Failed to activate the virtual environment. Exiting..."
-    exit 1
-fi
-
 echo "Python environment setup is successful."
-
-source my_env/bin/akshay
