@@ -19,12 +19,11 @@ This repository contains a script designed to find and manage AWS-specific IP pr
 - AWS CLI configured with your AWS credentials.
 - AWS VM instance id and region
 
-### Installation
+### Making up the enviroment
 
 1. Clone the repository:
     ```bash
     wget https://raw.githubusercontent.com/akshayh636/aws-specific-ip/main/environment.sh
-    wget https://raw.githubusercontent.com/akshayh636/aws-specific-ip/main/aws_ip_script.sh
-    chmod +x aws_ip_script.sh
-    sudo ./aws_ip_script.sh
+    chmod +x environment.sh
+    sudo ./environment.sh
     ```
