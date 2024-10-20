@@ -25,8 +25,8 @@ echo "Setting up the environment..."
 execute_command "sudo apt install -y build-essential libssl-dev libffi-dev python3-dev python3-venv" "Failed to install development packages"
 
 # Create a directory for virtual environments
-mkdir -p ~/environments
-cd ~/environments
+mkdir environments
+cd environments
 
 # Create and start the virtual Python environment
 echo "Starting the virtual Python environment..."
