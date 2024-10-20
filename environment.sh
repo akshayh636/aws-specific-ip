@@ -48,11 +48,9 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-source akshay/bin/activate &>/dev/null
-
-if [ $? -ne 0 ]; then
-    echo "Failed to activate the virtual environment. Exiting..."
-    exit 1
-fi
-
 echo "Python environment setup is successful."
+
+
+echo "Starting the environment"
+cd environments 
+source akshay/bin/activate &>/dev/null
