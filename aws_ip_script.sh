@@ -33,8 +33,7 @@ if sys.version_info[0] < 3:
 try:
     import boto3
 except ImportError:
-    print("Boto3 not found. Installing...")
-    pip install boto3
+    print("Boto3 not found. Please install boto3")
     import boto3
 
 # Prompt user for AWS credentials
