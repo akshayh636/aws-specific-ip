@@ -40,3 +40,9 @@ This repository contains a script designed to find and manage AWS-specific IP pr
 cd ~/environments/akshay
 source bin/activate
   ```
+### So the environment is ready to run the script 
+1. Install boto3
+    
+```bash
+pip install boto3
+  ```
