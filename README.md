@@ -20,7 +20,7 @@ This repository contains a script designed to find and manage AWS-specific IP pr
 - AWS VM instance id and region
 
 ### Tested on Ubuntu 24.04.1 LTS wsl editon 
-Working perfectly with environment.sh if you are unable to run then run the manual.sh codes separately
+Working perfectly with environment.sh if you are unable to run , then run the manual.txt codes separately
 
 ### How to get aws access credentials
 
