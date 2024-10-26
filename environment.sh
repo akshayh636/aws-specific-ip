@@ -31,18 +31,11 @@ fi
 
 # Create a directory for virtual environments
 echo "Creating virtual environment directory..."
-mkdir -p ~/environments &>/dev/null
+mkdir environments
 if [ $? -ne 0 ]; then
     echo "Failed to create the environments directory. Exiting..."
     exit 1
 fi
-
-cd ~/environments
-if [ $? -ne 0 ]; then
-    echo "Failed to navigate to the environments directory. Exiting..."
-    exit 1
-fi
-
 # Create and start the virtual Python environment
 echo "Starting the virtual Python environment..."
 python3 -m venv akshay &>/dev/null
