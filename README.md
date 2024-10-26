@@ -44,7 +44,7 @@ Working perfectly with environment.sh if you are unable to run , then run the ma
 
 ### To start the environment , run this
    ```bash
-source ~akshay/bin/activate
+source akshay/bin/activate
   ```
 ### So the environment is ready to run the script 
 1. Install boto3
