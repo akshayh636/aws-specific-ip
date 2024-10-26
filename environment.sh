@@ -29,15 +29,8 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-# Create a directory for virtual environments
-echo "Creating virtual environment directory..."
-mkdir environments
-if [ $? -ne 0 ]; then
-    echo "Failed to create the environments directory. Exiting..."
-    exit 1
-fi
 # Create and start the virtual Python environment
-echo "Starting the virtual Python environment..."
+echo "Creating virtual environment directory..."
 python3 -m venv akshay &>/dev/null
 
 if [ $? -ne 0 ]; then
@@ -45,9 +38,10 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-# Provide instructions for the user to manually activate the environment
-echo -e "${GREEN}To activate the virtual environment, run the following commands:${NC}"
-echo -e "${GREEN}cd ~/environments/akshay${NC}"
-echo -e "${GREEN}source bin/activate${NC}"
 
 echo "Python environment setup is successful."
+
+
+echo "Starting the environment"
+source akshay/bin/activate
+
