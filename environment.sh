@@ -27,6 +27,8 @@ fi
 
 # Create and start the virtual Python environment
 echo "Creating the virtual environment directory..."
+mkdir akshay
+
 if python3 -m venv ~/akshay; then
     echo -e "${GREEN}Virtual environment created successfully at ~/akshay.${NC}"
 else
