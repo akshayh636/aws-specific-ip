@@ -47,6 +47,6 @@ sudo chmod -R 775 ~/akshay
 
 # Provide instructions for the user to manually activate the environment
 echo -e "${GREEN}To activate the virtual environment, run the following commands:${NC}"
-echo -e "${GREEN}source ~/akshay/bin/activate${NC}"
+echo -e "${GREEN}source akshay/bin/activate${NC}"
 
 echo "Python environment setup is successful."
