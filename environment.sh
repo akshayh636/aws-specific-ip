@@ -30,7 +30,7 @@ if [ $? -ne 0 ]; then
 fi
 
 # Create and start the virtual Python environment
-echo "Creating virtual environment directory..."
+echo "Creating the virtual environment directory"
 python3 -m venv akshay &>/dev/null
 
 if [ $? -ne 0 ]; then
@@ -38,9 +38,8 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-echo "${GREEN}Python environment setup is successful.${NC}"
-
-
 # Provide instructions for the user to manually activate the environment
 echo -e "${GREEN}To activate the virtual environment, run the following commands:${NC}"
 echo -e "${GREEN}source akshay/bin/activate${NC}"
+
+echo "Python environment setup is successful."
