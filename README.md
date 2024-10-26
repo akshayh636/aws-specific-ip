@@ -19,6 +19,9 @@ This repository contains a script designed to find and manage AWS-specific IP pr
 - AWS CLI configured with your AWS credentials.
 - AWS VM instance id and region
 
+### Tested on Ubuntu 24.04.1 LTS wsl editon 
+Working perfectly with enviroment.sh if you are unable to run the enviroment.sh the install all the codes manually
+
 ### How to get aws access credentials
 
 - https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html
@@ -54,6 +57,8 @@ pip install boto3
 ```bash
 wget https://raw.githubusercontent.com/akshayh636/aws-specific-ip/main/aws_ip.py
   ```
+
+may
 3. Run the Script and enter your aws credentials and your preferable ip prefix
 
 ```bash
