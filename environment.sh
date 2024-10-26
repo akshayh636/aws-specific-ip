@@ -32,6 +32,24 @@ if ! python3 -m venv ~/akshay; then
     exit 1
 fi
 
+# Create and start the virtual Python environment
+echo "Creating the virtual environment directory..."
+python3 -m venv ~/akshay &>/dev/null
+
+if [ $? -ne 0 ]; then
+    echo "Failed to create the virtual environment. Exiting..."
+    exit 1
+fi
+
+# Debugging: Check if the directory exists
+if [ -d ~/akshay ]; then
+    echo "Virtual environment directory created successfully at ~/akshay."
+else
+    echo "Failed to create the virtual environment directory."
+    exit 1
+fi
+
+
 # Change permissions of the virtual environment folder
 sudo chown -R $(whoami):$(whoami) ~/akshay
 sudo chmod -R 775 ~/akshay
