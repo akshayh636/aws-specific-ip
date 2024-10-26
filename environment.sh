@@ -27,35 +27,20 @@ fi
 
 # Create and start the virtual Python environment
 echo "Creating the virtual environment directory..."
-if ! python3 -m venv ~/akshay; then
-    echo "Failed to create the virtual environment. Exiting..."
-    exit 1
-fi
-
-# Create and start the virtual Python environment
-echo "Creating the virtual environment directory..."
-python3 -m venv ~/akshay &>/dev/null
-
-if [ $? -ne 0 ]; then
-    echo "Failed to create the virtual environment. Exiting..."
-    exit 1
-fi
-
-# Debugging: Check if the directory exists
-if [ -d ~/akshay ]; then
-    echo "Virtual environment directory created successfully at ~/akshay."
+if python3 -m venv ~/akshay; then
+    echo -e "${GREEN}Virtual environment created successfully at ~/akshay.${NC}"
 else
-    echo "Failed to create the virtual environment directory."
+    echo "Failed to create the virtual environment. Check for errors above."
     exit 1
 fi
-
 
 # Change permissions of the virtual environment folder
+echo "Changing permissions of the virtual environment directory..."
 sudo chown -R $(whoami):$(whoami) ~/akshay
 sudo chmod -R 775 ~/akshay
 
 # Provide instructions for the user to manually activate the environment
-echo -e "${GREEN}To activate the virtual environment, run the following commands:${NC}"
+echo -e "${GREEN}To activate the virtual environment, run the following command:${NC}"
 echo -e "${GREEN}source ~/akshay/bin/activate${NC}"
 
 echo "Python environment setup is successful."
