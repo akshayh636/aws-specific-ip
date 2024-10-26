@@ -44,7 +44,7 @@ Working perfectly with environment.sh if you are unable to run then run the manu
 
 ### To start the environment , run this
    ```bash
-source akshay/bin/activate
+source ~akshay/bin/activate
   ```
 ### So the environment is ready to run the script 
 1. Install boto3
@@ -65,8 +65,7 @@ may
 python3 aws_ip.py
   ```
 
-![Alt text](https://imgur.com/a/wsVMCBg)
-
-
+![Alt text](https://res.cloudinary.com/dlpwtekqd/image/upload/v1729960091/tnei7vg1t04ov0gn0fdu.jpg)
 
 # Windows bat script coming soon.
+
