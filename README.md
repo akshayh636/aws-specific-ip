@@ -41,8 +41,7 @@ This repository contains a script designed to find and manage AWS-specific IP pr
 
 ### To start the environment , run this
    ```bash
-cd ~/environments/akshay
-source bin/activate
+source akshay/bin/activate
   ```
 ### So the environment is ready to run the script 
 1. Install boto3
