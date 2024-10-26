@@ -38,10 +38,9 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
+echo "${GREEN}Python environment setup is successful.${NC}"
 
-echo "Python environment setup is successful."
 
-
-echo "Starting the environment"
-source akshay/bin/activate
-
+# Provide instructions for the user to manually activate the environment
+echo -e "${GREEN}To activate the virtual environment, run the following commands:${NC}"
+echo -e "${GREEN}source akshay/bin/activate${NC}"
